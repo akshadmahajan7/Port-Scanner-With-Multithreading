@@ -34,3 +34,52 @@ Run the main GUI script directly from your terminal:
 
 ```bash
 python pyscanner_gui.py
+```
+
+## 📄 Generating a Report
+
+The **PyScan GUI** makes generating a comprehensive scan report straightforward and user-friendly.
+
+* **1. Complete a Successful Scan:** Start by entering the **target/ports** and clicking the **Start Scan** button.
+* **2. Activate Save Button:** Once the scan is finished, the **Save Report** button will automatically become **active**.
+* **3. Save the PDF:** Click **Save Report** to open a file dialog, allowing you to **name the PDF file** and choose the **save location**.
+
+The final PDF report provides all necessary audit information, including:
+* **Scan Metadata:** Target, IP, and Port Range.
+* **Tabular List:** A clean, organized list of all identified **open ports**.
+
+---
+
+## ⚙️ Technical Details
+
+The project is architecturally designed for clarity and maintainability:
+
+* **`core_scanner.py`**:
+    * Houses the **multi-threaded scanning logic**.
+    * Contains the **PDF generation function** using the powerful `reportlab` library.
+* **`pyscanner_gui.py`**:
+    * Manages the primary **Tkinter interface**.
+    * Handles **thread-safe updates** to the GUI.
+    * Uses the `filedialog` module to manage saving the reports.
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is **strictly** for **educational** and **authorized security testing** purposes. **Network scanning without explicit, written permission is illegal and unethical.** The developers are not responsible for any misuse of this tool.
+
+---
+
+## 🤝 Contribution
+
+We actively welcome contributions to enhance PyScan GUI! Suggested ideas include:
+
+* Adding an option to save reports as a simple **CSV file**.
+* Implementing **service version detection (banner grabbing)** and including this data in the report table.
+* Improving the overall **PDF template styling** and design.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - please refer to the `LICENSE` file for full details.
