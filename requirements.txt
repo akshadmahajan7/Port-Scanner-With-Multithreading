@@ -1,0 +1,6 @@
+# requirements.txt
+# Core modules are built-in (socket, threading, tkinter).
+# External dependencies for reporting:
+Pillow 
+# Often a dependency of ReportLab for images/text scaling
+reportlab
